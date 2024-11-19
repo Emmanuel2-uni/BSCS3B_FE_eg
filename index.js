@@ -26,7 +26,7 @@ function getUsers(){
   //fetch("http://localhost:5002/api/members", {mode: "cors"})
   //fetch("http://ccs105-api.onrender.com/api/members", {mode: "cors"})
     //https://api.sampleapis.com/jokes/goodJokes
-    fetch("http://api.sampleapis.com/jokes/goodJokes", {mode: "cors"})
+    fetch("https://api.sampleapis.com/jokes/goodJokes", {mode: "cors"})
     
     
     .then((response)=>{
@@ -36,7 +36,7 @@ function getUsers(){
 
     .then((data) =>{
       data.forEach((element)=>{
-        html += `<li> ${element.first_name} ${element.last_name}</li>`
+        html += `<li> ${element.setup} ${element.punchline}</li>`
       })
       content.innerHTML = html
     })
