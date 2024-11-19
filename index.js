@@ -12,8 +12,6 @@ console.log(fetch('https://pbs.twimg.com/media/GKhGFH_WwAEsGwy.jpg').then(respon
 
 */
 
-
-
 const content = document.querySelector('#content')
 
 window.addEventListener("load", () => {
@@ -21,7 +19,7 @@ window.addEventListener("load", () => {
 })
 
 function getUsers(){
-  
+  const rand = Math.random() * 20;
   let html = ""
   //fetch("http://localhost:5002/api/members", {mode: "cors"})
   //fetch("http://ccs105-api.onrender.com/api/members", {mode: "cors"})
@@ -33,14 +31,21 @@ function getUsers(){
       console.log(response)
       return response.json();
     })
-
+    
+    //data start
     .then((data) =>{
+      
+
       data.forEach((element)=>{
-        html += `<li> ${element.setup} ${element.punchline}</li>`
+        console.log(element.id)
+        console.log(Math.floor(rand))
+        if(element.id == Math.floor(rand)){
+          html += `<li> ${element.setup} <br>${element.punchline}</li>`
+        }
       })
       content.innerHTML = html
     })
-
+    //data end
     .catch((error) =>{
       console.log(error)
     })
