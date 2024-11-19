@@ -26,7 +26,7 @@ function getUsers(){
   //fetch("http://localhost:5002/api/members", {mode: "cors"})
   //fetch("http://ccs105-api.onrender.com/api/members", {mode: "cors"})
     //https://api.sampleapis.com/jokes/goodJokes
-    fetch('https://api.sampleapis.com/jokes/goodJokes', {mode: "cors"})
+    fetch("http://api.sampleapis.com/jokes/goodJokes", {mode: "cors"})
     
     
     .then((response)=>{
