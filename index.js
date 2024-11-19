@@ -24,7 +24,7 @@ function getUsers(){
   
   let html = ""
   //fetch("http://localhost:5002/api/members", {mode: "cors"})
-  fetch("https://ccs105-api.onrender.com/api/members", {mode: "cors"})
+  fetch("http://ccs105-api.onrender.com/api/members", {mode: "cors"})
     
     .then((response)=>{
       console.log(response)
